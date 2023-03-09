@@ -9,7 +9,8 @@ pdf_path = input("Enter the path to the PDF file: ")
 # Name the csv the same as pdf replacing .pdf with .csv
 csv_path = os.path.splitext(pdf_path)[0] + '.csv'
 
-# These are the keys we want to extract from the PDF
+# These are the keys we want to extract from the PDF (There is a lot of noise in
+# the PDF so dynamically setting keys would be difficult and perhaps unwise.)
 keys = [
     'Team',
     'Principal Owner',
@@ -18,6 +19,7 @@ keys = [
     'Percent Change From Last Year',
     'Stadium',
     'Facility Cost ($/Mil)',
+    'Date Built',
     'Facility Financing',
     'Percentage of Stadium Publicly Financed',
     'Most Recent Purchase Price ($/Mil)',
@@ -73,3 +75,6 @@ with open(csv_path, 'w', newline='') as csv_file:
     writer = csv.DictWriter(csv_file, fieldnames=keys)
     writer.writeheader()
     writer.writerows(data)
+
+# Print done in green
+print('\033[92m' + 'Done!' + '\033[0m')
