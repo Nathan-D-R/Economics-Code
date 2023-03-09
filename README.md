@@ -18,7 +18,7 @@ Reserves:
 This is a simple script I made to automate calculations for fractional reserve banking.
 
 Example usage:
-```shell
+```
 python reserves.py
 Input the initial currency in the economy.
 Initial currency: 10000
