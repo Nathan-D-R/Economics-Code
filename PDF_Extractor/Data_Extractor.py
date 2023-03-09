@@ -1,7 +1,11 @@
-import csv
-import io
-import os
-import PyPDF2
+# Print a message in red
+print('\033[91m' + 'PDF files often contain unstructured data meaning that the \
+data produced by this script will likely require cleaning.' + '\033[0m')
+
+import csv # For writing data to CSV
+import io # For reading data from PDF
+import os # For getting the path to the CSV file
+import PyPDF2 # For reading PDF files
 
 # Change these to match the PDF file and output CSV file
 # Get pdf_path from user
